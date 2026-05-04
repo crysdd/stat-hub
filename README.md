@@ -6,8 +6,20 @@ A Laravel package that provides tracking functionality.
 
 You can install the package via composer:
 
+First, sdd to composer.json
+```json
+...
+"repositories": [
+    {
+        "type": "vcs",
+        "url": "git@github.com:crysdd/stat-hub.git"
+    }
+]
+...
+```
+
 ```bash
-composer require vendor/stat-hub
+composer require crysdd/stat-hub:@dev
 ```
 
 Publish the config file if necessary:
