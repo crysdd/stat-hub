@@ -26,6 +26,14 @@ class StatHubServiceProvider extends ServiceProvider
         // Load routes from the package
         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
+        // Register Blade components
+        $this->loadViewsFrom(__DIR__.'/../resources/views', 'stat-hub');
+
+        // Publish views for customization
+        $this->publishes([
+            __DIR__.'/../resources/views' => resource_path('views/stat-hub'),
+        ], 'stat-hub-views');
+
         // Publish config file
         $this->publishes([
             __DIR__.'/../config/stat-hub.php' => config_path('stat-hub.php'),
